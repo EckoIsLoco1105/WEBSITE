@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Board</title>
+    <link rel="stylesheet" href="Main CSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="quest-board-container">
+        <header class="board-header">
+            <div class="title-group">
+                <h1>Quest Board</h1>
+                <p><span id="active-count">0</span> active quests • <span id="completed-count">0</span> completed</p>
+            </div>
+            <button class="post-quest-btn" onclick="toggleModal(true)">
+                <span>⊕</span> Post New Quest
+            </button>
+        </header>
+
+        <main class="quest-board-panel" id="quest-container">
+            </main>
+    </div>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <h2>Post New Quest</h2>
+            <div class="input-group">
+                <label>Name of Quest</label>
+                <input type="text" id="quest-name" placeholder="e.g. Defeat the UI Bugs">
+            </div>
+            <div class="input-group">
+                <label>Instructions</label>
+                <textarea id="quest-instructions" placeholder="Describe the task..."></textarea>
+            </div>
+            <div class="input-group">
+                <label>Reward</label>
+                <input type="text" id="quest-reward" placeholder="e.g. 500 Gold">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="toggleModal(false)">Cancel</button>
+                <button class="btn-submit" onclick="addQuest()">Post Quest</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Main java.js"></script>
+</body>
+</html>
